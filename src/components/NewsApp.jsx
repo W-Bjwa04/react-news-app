@@ -19,7 +19,7 @@ const NewsApp = () => {
     const pageSize = 10; // Number of articles per page
     const [searchData, setSearchData] = useState('') // State for search input
     
-
+    console.log(apiUrl)
     const { data, error, mutate, isLoading } = useSWR(
         `https://newsapi.org/v2/everything?q=pakistan&from=2025-01-25&sortBy=publishedAt&apiKey=${apiUrl}&page=${currentPage}&pageSize=${pageSize}`,
         fetcher
